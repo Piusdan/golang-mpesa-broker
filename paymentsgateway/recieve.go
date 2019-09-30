@@ -1,7 +1,6 @@
 package paymentsgateway
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"encoding/json"
@@ -55,7 +54,7 @@ func LipaNaMpesaOnlineEndpoint(w http.ResponseWriter, r *http.Request) {
 	response := gateway.InitiateLipaNaMpesaRequest(req.Amount, req.PhoneNumber, "Online Payment")
 	
 	result := Result{
-		ResultCode: fmt.Sprintf("%d", response.ResultCode),
+		// ResultCode: response.ResultCode,
 		ResultDesc: response.ResponseDescription,
 		ThirdPartyTransID: response.CheckoutRequestID,
 	}
