@@ -17,3 +17,9 @@ type PaymentGatewayResult struct {
 	Errors     string `json:"errors"`
 	ErrorCode string `json:"error_code"`
 }
+
+type Result struct {
+	ResultCode int
+	ResultDesc string
+	ThirdPartyTransID string
+}
