@@ -10,10 +10,10 @@ type PaymentGateway interface {
 }
 
 type PaymentGatewayResult struct {
-	Status     string
-	Message 	string
-	Timestamp  time.Time
-	StatusCode string
-	Errors     string
-	ErrorCode string
+	Status     string `json:"status"`
+	Message 	string `json:"message"`
+	Timestamp  time.Time `json:"timestamp"`
+	StatusCode string  `json:"status_code"`
+	Errors     string `json:"errors"`
+	ErrorCode string `json:"error_code"`
 }

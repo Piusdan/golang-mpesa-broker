@@ -40,5 +40,20 @@ var gatewayRoutes = routes{
 		"POST",
 		"/disburse",
 		DisburseEndpoint,
+	}, route{
+		"ValidateTransaction",
+		"POST",
+		"/validate",
+		ValidateTransactionEndpoint,
+	}, route{
+		"ConfirmC2BTransaction",
+		"POST",
+		"/confirm",
+		ConfirmC2BTransactionEndpoint,
+	}, route{
+		"LipaNaMpesaOnline",
+		"POST",
+		"/stk-push",
+		LipaNaMpesaOnlineEndpoint,
 	},
 }
